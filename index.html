@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Projeto com Navegação Suspensa</title>
+
+  <link rel="stylesheet" href="scr/style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navegate">
+      <img src="images/logo.svg" alt="Logo">
+      <div class="nav-item">
+        <div class="navFuncionalidades">
+          <span class="toggle-funcionalidades">
+            Funcionalidades <img src="images/icon-arrow-down.svg" class="icone-seta" alt="seta">
+          </span>
+          <div class="dropdown">
+            <a>
+              <img src="/images/icon-todo.svg" alt="Tarefas"> Tarefas
+            </a>
+            <a>
+              <img src="/images/icon-calendar.svg" alt="Calendario"> Calendário
+            </a>
+            <a>
+              <img src="/images/icon-reminders.svg" alt="Lembretes"> Lembretes
+            </a>
+            <a>
+              <img src="/images/icon-planning.svg" alt="Planejamento"> Planejamento
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item">
+        <div class="navCompanhia">
+          <span class="toggle-companhia">
+            Companhia <img src="images/icon-arrow-down.svg" class="icone-seta2" alt="seta">
+          </span>
+          <div class="dropdown2">
+            <a href="">História</a>
+            <a href="">Nosso Time</a>
+            <a href="">Blog</a>
+          </div>
+        </div>
+        <a href="#" class="">Carreiras</a>
+        <a href="#">Sobre</a>
+    </nav>
+    <div class="btn-Geral">
+      <button type="submit" class="btn-Login">Entrar</button>
+      <button type="submit" class="btn-Register">Registrar</button>
+    </div>
+  </header>
+
+  <section>
+    <div class="input-Background">
+      <div class="input-Text">
+        <h1>Melhore seu <br> trabalho remoto</h1>
+        <p>Sincronize sua equipe independente da localização.</p>
+        <p>Simplifique processos, crie rituais de equipe e observe o aumento da produtividade.</p>
+        <button class="btn-Centro">Saber mais</button><br>
+        <div class="img-Test">
+          <img src="images/client-databiz.svg" alt="">
+          <img src="images/client-audiophile.svg" alt="">
+          <img src="images/client-meet.svg" alt="">
+          <img src="images/client-maker.svg" alt="">
+        </div>
+      </div>
+      <div class="input-Img">
+        <img src="images/image-hero-desktop.png" alt="" width="380px">
+      </div>
+    </div>
+    <div class="input-Login">
+      <span class="icon-Finish"><ion-icon name="close-outline"></ion-icon></span>
+      <h1>Acesse sua conta</h1>
+      <form>
+        <div class="input-Form">
+          <span class="icon"><ion-icon name="person-outline"></ion-icon></ion-icon></span>
+          <input type="text" required>
+          <label>Login</label>
+        </div>
+        <div class="input-Form">
+          <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+          <input type="password" required>
+          <label>Senha</label>
+        </div>
+        <div class="esqueci-Senha">
+          <label for="input-check"><input type="checkbox" id="input-check">
+            Lembrar senha</label>
+          <a href="#">Esqueci minha senha</a>
+        </div>
+        <button type="submit" class="btn-Entrar">Entrar</button>
+        <div class="criar-Conta">
+          <p>Ainda não possui conta? <a href="#" class="criar-Link">Crie sua conta</a></p>
+        </div>
+      </form>
+    </div>
+    <div class="input-Register">
+      <span class="icone-Finish"><ion-icon name="close-outline"></ion-icon></span>
+      <h1>Crie sua conta</h1>
+      <form>
+        <div class="input-Form">
+          <span class="icon"><ion-icon name="person-outline"></ion-icon></ion-icon></span>
+          <input type="text" required>
+          <label>Usuário</label>
+        </div>
+        <div class="input-Form">
+          <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+          <input type="email" required>
+          <label>Email</label>
+        </div>
+        <div class="input-Form">
+          <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+          <input type="password" required>
+          <label>Senha</label>
+        </div>
+        <div class="esqueci-Senha">
+          <label for="input-check">
+            <input type="checkbox" id="input-check">
+            Concordo com os termos e condições
+          </label>
+        </div>
+        <button type="submit" class="btn-Entrar">Criar</button>
+        <div class="criar-Conta">
+          <p>Já possui conta? <a href="#" class="login-Link">Acesse sua conta</a></p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <script src="scr/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

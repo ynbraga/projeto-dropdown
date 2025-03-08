@@ -1,0 +1,556 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: (0, 0%, 98%);
+}
+
+@font-face {
+    font-family: "Epilogue";
+    src: url(https://fonts.google.com/specimen/Epilogue);
+}
+
+/*------------------- CABECALHO ------------------------------------------------- */
+
+header{
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content:space-between;
+    padding: 20px 30px;
+    align-items: center;
+    box-shadow: 0 0 5px hsl(0, 0%, 41%);
+}
+
+.navegate {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 30px;
+}
+
+.navegate img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+}
+
+.nav-item{
+    position:relative;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-item a{
+    padding-left: 35px;
+}
+
+.nav-item a:hover{
+    color: rgb(28, 27, 27);
+    font-weight: 600;
+}
+
+.navFuncionalidades{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+}
+
+.toggle-funcionalidades{
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    font-weight: 500;
+    color: hsl(0, 0%, 41%);
+
+}
+
+.toggle-funcionalidades:hover{
+    color: rgb(28, 27, 27);
+    font-weight: 600;
+}
+
+.icone-seta {
+    transition: transform 0.3s ease;
+    padding-left: 10px;
+}
+
+.icone-seta2 {
+    transition: transform 0.3s ease;
+    padding-left: 2px;
+}
+
+.dropdown {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 10px 0;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 160px;
+    z-index: 10;
+}
+
+.dropdown a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 15px;
+    color: #4b5563;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    font-size: 1em;
+    font-weight: 500
+}
+
+.dropdown2 {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 10px 0;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 120px;
+    z-index: 10;
+}
+
+.dropdown2 a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 15px;
+    color: #4b5563;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    font-size: 1em;
+    font-weight: 500
+}
+
+.dropdown2 a:hover {
+    background-color: #f3f4f6;
+    border-radius: 8px;
+}
+
+.dropdown a:hover {
+    background-color: #f3f4f6;
+    border-radius: 8px;
+}
+
+/* 🔄 Ativo */
+.navFuncionalidades.active .dropdown {
+    display: flex;
+}
+
+.navFuncionalidades.active .dropdown2 {
+    display: flex;
+}
+
+.navFuncionalidades.active .icone-seta {
+    transform: rotate(180deg);
+    padding-right: 10px;
+}
+
+.navFuncionalidades.active .icone-seta2 {
+    transform: rotate(180deg);
+    padding-right: 1px;
+}
+
+.navCompanhia{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+}
+
+.toggle-companhia{
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    font-weight: 500;
+    color: hsl(0, 0%, 41%);
+    gap: 8px;
+}
+
+.toggle-companhia:hover{
+    color: rgb(28, 27, 27);
+    font-weight: 600;
+}
+
+.navCompanhia.active .dropdown {
+    display: flex;
+}
+
+.navCompanhia.active .dropdown2 {
+    display: flex;
+}
+
+.navCompanhia.active .icone-seta {
+    transform: rotate(180deg);
+    padding-right: 2px;
+}
+
+.navCompanhia.active .icone-seta2 {
+    transform: rotate(180deg);
+    padding-right: 2px;
+}
+
+/* ------------------------------------------------ */
+
+.navegate a {
+    font-size: 1em;
+    font-weight: 500;
+    color: hsl(0, 0%, 41%);
+    text-decoration: none;
+}
+
+
+.btn-Login {
+    border: none;
+    background: transparent;
+    width: 100px;
+    height: 40px;
+    font-size: 1em;
+    font-weight: 500;
+    color: hsl(0, 0%, 41%);
+    cursor: pointer;
+}
+
+.btn-Login:hover{
+    text-decoration: underline;
+    color: rgb(28, 27, 27);
+    font-weight: 600;
+}
+
+.btn-Register{
+    width: 100px;
+    height: 40px;
+    border-radius: 12px;
+    background: transparent;
+    border: 2px solid hsl(0, 0%, 41%);
+    font-size: 1em;
+    font-weight: 500;
+    color: hsl(0, 0%, 41%);
+    cursor: pointer;
+}
+
+.btn-Register:hover{
+    text-decoration: none;
+    color: rgb(28, 27, 27);
+    font-weight: 600;
+    border: 2px solid rgb(28, 27, 27);
+}
+
+/* ----------------------------- CORPO ---------------------------------------------------- */
+
+section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+section .input-Background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    gap: 50px;
+
+}
+
+.input-Background {
+    height: auto;
+    width: auto; 
+}
+
+.input-Text{
+    width: 600px;
+}
+
+.input-Text h1{
+    font-size:65px;
+    font-weight: 700;
+    font-family: "Epilogue";
+    color:  hsl(0, 0%, 8%);
+    padding-bottom: 25px;
+    padding-top: 75px;
+}
+
+.input-Text p{
+    display: flex;
+    align-items: center;
+    width: 430px;
+    font-weight: 500;
+    font-size: 17px;
+    color: hsl(0, 0%, 41%);
+}
+
+.input-Text .btn-Centro{
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 12px;
+    background-color:hsl(0, 0%, 8%);
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 55px;
+}
+
+.input-Text .img-Test{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 480px;
+    margin-top: 70px;
+}
+
+
+/*---------------------------------- LOGIN ---------------------------------------------*/ 
+
+.input-Background.active{
+    display: none;
+}
+
+.input-Login {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(80%) translateY(-260px) scale(0); /* Angulo para descer do botão 'Entrar' */
+    opacity: 0;
+    transition: transform 0.6s ease-out, opacity 0.1s ease; /* subida do input */
+}
+
+.input-Login.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinha o conteúdo no topo */
+    align-items: center;
+    text-align: center;
+    width: 440px;
+    height: 470px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px hsl(0, 0%, 41%);
+    padding: 20px 0; /* Espaçamento interno para evitar sobreposição */
+    top: 60px; /* Define a posição abaixo do botão */
+    transform: translateX(-50%) translateY(100px) scale(1); /* Ele desce até o centro */
+    opacity: 1;
+}
+
+
+
+.input-Login.active .icon-Finish{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(0, 0%, 41%);
+    border-radius: 0 15px 0 15px;
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    color: hsl(0, 0%, 100%);
+    font-size: 25px;
+    z-index: 1;
+}
+
+.input-Form{
+    position: relative;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-bottom: 2px solid black;
+    outline: none;
+    width: 305px;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-Login.active h1{
+    font-size: 35px;
+    font-weight: 700;
+    padding-top: 35px;
+}
+
+.input-Form label{
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    font-weight: 500;
+    font-size: 18px;
+    color: hsl(0, 0%, 41%);
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-Form input:focus~label,
+.input-Form input:valid~label {
+    top: -5px;
+}
+
+.input-Form input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0 35px 0 5px;
+}
+
+.input-Form .icon{
+    position: absolute;
+    right: 8px;
+    line-height: 65px;
+    font-size: 1.3em;
+    color:hsl(0, 0%, 41%);
+}
+
+
+.btn-Entrar{
+    cursor: pointer;
+    width: 100%;
+    height: 45px;
+    border-radius: 7px;
+    border: none;
+    background-color: hsl(0, 0%, 8%);
+    font-size: 1.1em;
+    font-weight: 700;
+    text-align: center;
+    color:  #e8e8e8;
+}
+
+.esqueci-Senha{
+    display: flex;
+    justify-content: space-between;
+    margin: -15px 0 15px;
+    color: hsl(0, 0%, 8%);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.esqueci-Senha label input {
+    margin-right: 3px;
+}
+
+.esqueci-Senha input {
+    transform: scale(1.3);
+    border: none;
+}
+
+.esqueci-Senha a {
+    text-decoration: none;
+    color: hsl(0, 0%, 8%);
+    font-weight: 600;
+}
+
+.criar-Conta{
+    margin: 25px 0 15px 0;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.criar-Link {
+    text-decoration: none;
+    color:hsl(0, 0%, 8%);
+    font-weight: 600;
+}
+
+.criar-Link:hover{
+    text-decoration: underline;
+}
+
+
+/* --------------------------------------- REGISTRO ---------------------------------------------- */
+
+.input-Register{
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(110%) translateY(-300px) scale(0); /* Angulo para descer do botão 'Entrar' */
+    opacity: 0;
+    transition: transform 0.6s ease-out, opacity 0.1s ease; /* subida do input */
+}
+
+.input-Register.active{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinha o conteúdo no topo */
+    align-items: center;
+    text-align: center;
+    padding: 20px 0; /* Espaçamento interno para evitar sobreposição */
+    top: 20px; /* Define a posição abaixo do botão */
+    width: 440px;
+    height: 530px;
+    margin: 25px 0 15px 0;
+    border-radius: 20px;
+    box-shadow: 0 0 30px hsl(0, 0%, 41%);
+    transform: translateX(-50%) translateY(80px) scale(1); /* Ele desce até o centro */
+    opacity: 1;
+}
+
+.input-Register h1{
+    font-size: 35px;
+    font-weight: 700;
+    padding-top: 35px;
+}
+
+.input-Register .icone-Finish{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(0, 0%, 41%);
+    border-radius: 0 15px 0 15px;
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    color: hsl(0, 0%, 100%);
+    font-size: 25px;
+    z-index: 1;
+}
+
+.login-Link {
+    text-decoration: none;
+    color: hsl(0, 0%, 8%);
+    font-weight: 600;
+}
+
+/* ------------------------------------- TRANSITION LOCALE --------------------------------------- */
+
+
+
+
+
+
+
+
